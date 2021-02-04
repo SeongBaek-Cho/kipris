@@ -63,15 +63,7 @@ for number in applicationnumber_arr :
     lastupdate_date = None
     create_user_id = 1
 
-    kipridb = mysql.connector.connect(
-        user='refdb',
-        port=3306,
-        password='ckarhansgjs',
-        host='192.168.8.217',
-        database='REFDB'
-    )
-    mycursor = kipridb.cursor()
-
+    
     url = 'http://plus.kipris.or.kr/kipo-api/kipi/patUtiModInfoSearchSevice/getBibliographyDetailInfoSearch?applicationNumber=%s&ServiceKey=%s' %(number, key)
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'html.parser')
