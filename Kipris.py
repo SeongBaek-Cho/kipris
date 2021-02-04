@@ -16,8 +16,7 @@ def getDateFormat (value) :
     date = value.replace("(","").replace(")","")
     return date
 
-# key = 'Uwsq9QuL9unbs/kiXVJb3RvPs6cB49=LKMhIIt4e8uU=' # 조성백
-key = 'A/u7iG0SdXDncO68VJNUBO3UUGN2MJ6S3NuEoAPQahc=' # 김예린
+
 base = 'http://plus.kipris.or.kr/kipo-api/kipi/patUtiModInfoSearchSevice/getWordSearch?word=염기서열&pageNo=2&ServiceKey=%s' % key
 # url = 'http://plus.kipris.or.kr/openapi/rest/patUtiModInfoSearchSevice/freeSearchInfo?word=염기서열&patent=false&utility=true&docsStart=1&docsCount=50&lastvalue=R&accessKey=%s' % key
 res = requests.get(base)
